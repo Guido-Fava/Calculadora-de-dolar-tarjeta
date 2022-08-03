@@ -1,0 +1,39 @@
+* 
+{
+    background-color: whitesmoke;
+}
+
+body {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    align-content: center;
+    font-family: 'Arial', Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    color: black;
+} 
+
+p {
+    font-size: larger;
+    word-spacing: 0.1em;
+    padding: 2%;
+    color: black;
+    text-align: center;
+}
+
+strong {
+    font-weight: 700;
+    color: green;
+}
+
+span {
+    font-weight: 700;
+    color:black;
+}
+
+.dolar{
+text-align: center;
+}
