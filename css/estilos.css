@@ -37,3 +37,8 @@ span {
 .dolar{
 text-align: center;
 }
+
+.btn{
+    color: white;
+    background-color: green;
+}
