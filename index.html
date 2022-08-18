@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
     <link rel="stylesheet" href="css/estilos.css">
-    <script src="js/calculadora.js"></script> 
+    <script defer src="js/calculadora.js"></script> 
+    <script defer src="js/arraymonedas.js"></script>
 </head>
 <body>
     <h1>Calculadora de dólar tarjeta</h1>    
@@ -17,7 +18,28 @@
     <p>La herramienta calculará el monto a pagar en pesos argentinos (ARS) más el <strong>impuesto PAIS (30%)</strong> y el <strong>impuesto a las ganancias (45%)</strong> asociados a compras en el exterior.</p>
 <div>
     <button class=btn type="button" onclick="calcular()">Calcular</button>
-    <script> calcular();</script>
 </div>
+
+<article class="container">
+    <div class="parent">
+        <div>
+            <label for="selectmoneda">Moneda</label>
+            <select id="selectmoneda" name="selectmoneda">
+                <option value="" selected disabled>...</option> -->
+                <option value="">Dolar estadounidense (USD)</option>
+                <option value="">Euro (EUR)</option>
+                <option value="">Libra esterlina (GBP)</option>
+                <option value="">Reales (BRL)</option>
+                <option value="">Pesos chilenos (CLP)</option>
+            </select>
+        </div>
+        <footer>
+            <button class="btn" onclick="listarMonedas()">Listar Monedas</button>
+            <button class="button" onclick="agregarMoneda()">Agregar Moneda</button>
+            <button class="button-red" onclick="quitarMoneda()">Quitar Moneda</button>
+        </footer>
+    </div>
+</article>
+
 </body>
 </html>

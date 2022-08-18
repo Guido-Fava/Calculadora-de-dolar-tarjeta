@@ -7,4 +7,5 @@ function calcular() {
 
 function realizarCalculo(num1, num2) {
     alert((num1 * num2) * 1.75)
+    console.log((num1 * num2) * 1.75)
 }
