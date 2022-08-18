@@ -1,5 +1,19 @@
 const monedas = ['Dolar estadounidense (USD)', 'Euro (EUR)', 'Libra esterlina (GBP)', 'Reales (BRL)', 'Pesos chilenos (CLP)']
 
+class Moneda {
+    constructor(nombre, ISO, cotizacion) {
+        this.nombre = nombre
+        this.ISO = ISO
+        this.cotizacion = cotizacion
+    }
+}
+
+const moneda1 = new Moneda("Dolar estadounidense", "USD", 135)
+const moneda2 = new Moneda("Euro", "EUR", 137)
+const moneda3 = new Moneda("Libra esterlina", "GBP", 163)
+const moneda4 = new Moneda("Reales", "BRL", 26)
+const moneda5 = new Moneda("Pesos chilenos", "CLP", 0.15)
+
 function listarMonedas() {
 
     for (let i = 0; i < monedas.length; i++) {
@@ -8,13 +22,11 @@ function listarMonedas() {
 }
 
 function agregarMoneda() {
-    let nuevaMoneda = prompt("Ingresa la nueva moneda:")
-    let resultado = monedas.includes(nuevaMoneda)
-        if (!resultado) { 
-            monedas.push(nuevaMoneda)
-        } else {
-            console.warn("La moneda", nuevaMoneda, "ya figura en la lista.")
-        }
+    nombre = prompt("Ingrese el nombre de la moneda")
+    ISO = prompt("Ingrese codigo ISO")
+    cotizacion = prompt("Ingrese la contizacion")
+    const nuevaMoneda = new Moneda (nombre, ISO, cotizacion)
+    console.log(nuevaMoneda)
 }
 
 function quitarMoneda() {
